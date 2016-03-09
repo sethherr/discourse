@@ -21,6 +21,9 @@
   .title {
     vertical-align: middle;
     overflow: hidden;
+    &.minimized {
+      width: 40px;
+    }
   }
   .panel {
     text-align: right;

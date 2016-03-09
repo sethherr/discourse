@@ -3,6 +3,10 @@
     {{home-logo minimized=showExtraInfo}}
     {{plugin-outlet "header-after-home-logo"}}
 
+    {{#if showExtraInfo}}
+      {{header-extra-info topic=topic}}
+    {{/if}}
+
     <div class='panel clearfix'>
       {{#unless currentUser}}
         {{#if showSignUpButton}}
@@ -57,10 +61,6 @@
         {{hamburger-menu visible=hamburgerVisible showKeyboardAction="showKeyboardShortcutsHelp"}}
         {{search-menu visible=searchVisible}}
     </div>
-
-    {{#if showExtraInfo}}
-      {{header-extra-info topic=topic}}
-    {{/if}}
   </div>
 </div>
 {{plugin-outlet "header-under-content"}}
